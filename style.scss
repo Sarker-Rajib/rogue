@@ -41,210 +41,181 @@ body {
             top: 0;
             height: 100%;
             z-index: 1;
-            max-width: 120px;
 
-            .ammo_hud_top_layer {
+            .wrapper {
+                height: 100%;
                 position: relative;
-                height: 100%;
-                z-index: 100;
 
-                #ammo_hud_top_layer_img {
-                    max-height: 100%;
-                }
-
-            }
-
-            .ammo_hud_bullets_layer {
-                position: absolute;
-                right: 0;
-                top: 0;
-                height: 100%;
-                max-height: 100%;
-                z-index: 90;
-                overflow: hidden;
-
-                #ammo_hud_bullets_layer_img {
-                    max-width: 100%;
+                .ammo_hud_top_layer {
+                    position: relative;
                     height: 100%;
-                    animation-duration: 10s;
-                    animation-name: dump_ammo;
-                    animation-fill-mode: forwards;
-                    animation-iteration-count: infinite;
-                    animation-direction: normal;
-                    transition: 3s;
+                    z-index: 100;
+
+                    #ammo_hud_top_layer_img {
+                        height: 100%;
+                    }
+
                 }
-            }
 
-
-            .ammo_hud_bottom_layer {
-                position: absolute;
-                right: 0;
-                top: 0;
-                height: 100%;
-                max-height: 100%;
-                z-index: 10;
-                width: 100%;
-
-                img {
+                .ammo_hud_bottom_layer {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
                     height: 100%;
+                    width: 100%;
+                    z-index: 10;
+
+                    img {
+                        height: 100%;
+                    }
                 }
-            }
 
-
-            .ammo_hud_middle_space {
-                position: absolute;
-                right: 0;
-                bottom: 25%;
-                overflow: visible;
-                z-index: 120;
-
-                #ammo_hud_safety_switch_img {
+                .ammo_hud_bullets_layer {
                     position: absolute;
-                    top: 40px;
-                    right: 40px;
-                    animation-duration: 10s;
-                    animation-name: toggle_switch;
-                    animation-fill-mode: forwards;
-                    animation-iteration-count: infinite;
-                    animation-direction: normal;
-                    transform-origin: 50% 26%;
+                    right: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 90;
+                    overflow: hidden;
 
-
-                    @media(max-width: 1400px) {
-                        top: 30px;
-                        right: 28px;
-                    }
-
-                    @media(max-width: 1199px) {
-                        width: 45px;
-                        top: 25px;
-                        right: 25px;
-                    }
-
-                    @media(max-width: 991px) {
-                        width: 30px;
-                        right: 20px;
-                        top: 10px;
-                    }
-
-                    @media(max-width: 767px) {
-                        width: 20px;
-                        right: 15px;
-                        top: 10px;
-                    }
-
-                    @media(max-width: 460px) {
-                        width: 10px;
-                        right: 10px;
-                        top: 10px;
+                    #ammo_hud_bullets_layer_img {
+                        height: 100%;
+                        animation-duration: 10s;
+                        animation-name: dump_ammo;
+                        animation-fill-mode: forwards;
+                        animation-iteration-count: infinite;
+                        animation-direction: normal;
+                        transition: 3s;
                     }
                 }
-            }
 
-
-            .ammo_hud_bottom_space {
-                position: absolute;
-                right: 0px;
-                bottom: 15%;
-                overflow: visible;
-                z-index: 105;
-
-                #ammo_hud_sfx_switch_img {
+                .ammo_hud_middle_space {
                     position: absolute;
-                    top: 55px;
-                    right: 40px;
-                    animation-duration: 10s;
-                    animation-name: toggle_switch;
-                    animation-fill-mode: forwards;
-                    animation-iteration-count: infinite;
-                    animation-direction: normal;
-                    transform-origin: 50% 26%;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    width: 100%;
+                    overflow: visible;
+                    z-index: 120;
 
 
-                    @media(max-width: 1400px) {
-                        top: 40px;
-                        right: 28px;
+                    #ammo_hud_safety_switch_img {
+                        position: absolute;
+                        bottom: 15%;
+                        right: 40%;
+                        animation-duration: 10s;
+                        animation-name: toggle_switch;
+                        animation-fill-mode: forwards;
+                        animation-iteration-count: infinite;
+                        animation-direction: normal;
+                        transform-origin: 50% 26%;
+
+
+                        @media(max-width: 1920px) {
+                            bottom: 11%;
+                        }
+
+                        @media(max-width: 1400px) {
+                            bottom: 9%;
+                        }
+
+                        @media(max-width: 1199px) {
+                            bottom: 5%;
+                        }
+
+                        @media(max-width: 991px) {
+                            width: 30px;
+                            bottom: 9%;
+                        }
+
+                        @media(max-width: 767px) {
+                            width: 20px;
+                            bottom: 5%;
+                        }
+                    }
+                }
+
+                .ammo_hud_bottom_space {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 100%;
+                    overflow: visible;
+                    z-index: 105;
+
+                    #ammo_hud_sfx_switch_img {
+                        position: absolute;
+                        bottom: 4%;
+                        right: 40%;
+                        animation-duration: 10s;
+                        animation-name: toggle_switch;
+                        animation-fill-mode: forwards;
+                        animation-iteration-count: infinite;
+                        animation-direction: normal;
+                        transform-origin: 50% 26%;
+
+
+                        @media(max-width: 1920px) {
+                            bottom: 0%;
+                        }
+
+                        @media(max-width: 1400px) {
+                            bottom: -2%;
+                        }
+
+                        @media(max-width: 1199px) {
+                            bottom: -6%;
+                        }
+
+                        @media(max-width: 991px) {
+                            width: 30px;
+                            bottom: -3%;
+                        }
+
+                        @media(max-width: 767px) {
+                            width: 20px;
+                            bottom: -6%;
+                        }
                     }
 
-                    @media(max-width: 1199px) {
-                        width: 45px;
-                        top: 30px;
-                        right: 25px;
-                    }
+                }
 
-                    @media(max-width: 991px) {
-                        width: 30px;
-                        right: 20px;
-                        top: 15px;
-                    }
+                .ammo_hud_wording {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0px;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 106;
 
-                    @media(max-width: 767px) {
-                        width: 20px;
-                        right: 15px;
-                        top: 15px;
+                    #ammo_hud_wording_img {
+                        max-width: 100%;
+                        height: 100%;
                     }
+                }
 
-                    @media(max-width: 460px) {
-                        width: 10px;
-                        right: 10px;
-                        top: 10px;
+                .ammo_hud_sfx_off {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 999;
+
+                    #ammo_hud_sfx_off_img {
+                        width: 100%;
+                        height: 100%;
+                        animation-duration: 10s;
+                        animation-name: toggle_sfx_off;
+                        animation-fill-mode: forwards;
+                        animation-iteration-count: infinite;
+                        animation-direction: normal;
                     }
                 }
 
             }
-
-            .ammo_hud_wording {
-                position: absolute;
-                right: 0;
-                top: 15px;
-                height: 100vh;
-                max-height: 100vh;
-                z-index: 106;
-
-                @media(max-width: 1400px) {
-                    top: 15px;
-                }
-
-                @media(max-width: 991px) {
-                    top: 0px;
-                }
-
-                #ammo_hud_wording_img {
-                    aspect-ratio: 1 / 10;
-                    max-width: 100%;
-                    max-height: 100vh;
-                }
-            }
-
-
-            .ammo_hud_sfx_off {
-                position: absolute;
-                right: 0px;
-                top: 15px;
-                height: 100vh;
-                max-height: 100vh;
-                z-index: 110;
-
-
-                @media(max-width: 1400px) {
-                    top: 15px;
-                }
-
-                @media(max-width: 991px) {
-                    top: 0px;
-                }
-
-                #ammo_hud_sfx_off_img {
-                    max-width: 100%;
-                    animation-duration: 10s;
-                    animation-name: toggle_sfx_off;
-                    animation-fill-mode: forwards;
-                    animation-iteration-count: infinite;
-                    animation-direction: normal;
-                }
-            }
-
-
         }
     }
 }

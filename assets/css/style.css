@@ -26,6 +26,11 @@ body {
     width: 90%;
   }
 }
+@media (min-width: 2000px) {
+  .layout .main {
+    width: 100%;
+  }
+}
 .layout .main .ra_scene img {
   width: 100%;
 }

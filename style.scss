@@ -12,7 +12,7 @@ body {
     height: 100vh;
     overflow: hidden;
 
-    @media(min-width: 767px) {
+    @media(max-width: 767px) {
         height: 90vh;
     }
 
